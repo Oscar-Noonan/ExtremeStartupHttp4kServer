@@ -1,17 +1,16 @@
-# fly.toml app configuration file generated for extreme-startup-player
+# fly.toml app configuration file generated for extreme-startup-player-onoonan on 2026-07-15T14:34:30+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'extreme-startup-player'
+app = 'extreme-startup-player-onoonan'
 primary_region = 'lhr'
 
 [build]
-
 [http_service]
   internal_port = 8124
   force_https = true
-  auto_stop_machines = true
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
   processes = ['app']
