@@ -12,6 +12,7 @@ class Answerer {
             return numbers.max().toString()
             //What is 82 plus 87?
             //What is 51 multiplied by 98?
+            //What is 41 minus 38?
         } else if (question.startsWith("What is your name?")) {
             return "oscar"
         }
@@ -24,6 +25,8 @@ class Answerer {
                 return numbers.sum().toString()
             } else if (expressionStrings[1] == "multiplied") {
                 return (numbers.first() * numbers.last()).toString()
+            } else if (expressionStrings[1] == "minus") {
+                return (numbers.first() - numbers.last()).toString()
             }
         }
         return "oscar"

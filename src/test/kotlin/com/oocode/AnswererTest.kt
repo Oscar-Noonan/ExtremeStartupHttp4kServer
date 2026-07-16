@@ -16,4 +16,22 @@ class AnswererTest {
         val contents = Answerer().answerFor("What is 82 plus 87?")
         assertThat(contents, equalTo("169"))
     }
+
+    @Test
+    fun multipliedQuestion() {
+        val contents = Answerer().answerFor("What is 4 multiplied 5?")
+        assertThat(contents, equalTo("20"))
+    }
+
+    @Test
+    fun minusQuestion() {
+        val contents = Answerer().answerFor("What is 6 minus 2?")
+        assertThat(contents, equalTo("4"))
+    }
+
+    @Test
+    fun largestNumberQuestion() {
+        val contents = Answerer().answerFor("Which of the following numbers is the largest: 15, 57, 36?")
+        assertThat(contents, equalTo("57"))
+    }
 }
