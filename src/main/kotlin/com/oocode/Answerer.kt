@@ -43,6 +43,44 @@ class Answerer {
                 }
             }
             return results.joinToString()
+            //Which of the following numbers is both a square and a cube: 664, 2601, 2767, 1837, 2134, 2197, 1?
+        } else if (question.startsWith("Which of the following numbers is both a square and a cube:")) {
+            val cubesandsquares = listOf(
+                1,
+                64,
+                729,
+                4096,
+                15625,
+                46656,
+                117649,
+                262144,
+                531441,
+                1000000,
+                1771561,
+                2985984,
+                4826809,
+                7529536,
+                11390625,
+                16777216,
+                24137569,
+                34012224,
+                47045881,
+                64000000
+            )
+            var numberStrings =
+                question.substringAfter("Which of the following numbers is both a square and a cube:").dropLast(1)
+                    .trim().split(", ")
+            var numbers = mutableListOf<Int>()
+            for (number in numberStrings) {
+                numbers.add(number.toInt())
+            }
+            var results = mutableListOf<Int>()
+            for (number in numbers) {
+                if (cubesandsquares.contains(number)) {
+                    results.add(number)
+                }
+            }
+            return results.joinToString()
         }
         return "oscar"
     }

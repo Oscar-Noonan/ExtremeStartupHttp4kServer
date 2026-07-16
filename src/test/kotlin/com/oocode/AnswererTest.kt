@@ -40,4 +40,10 @@ class AnswererTest {
         val contents = Answerer().answerFor("Which of the following numbers are primes: 3, 4, 5?")
         assertThat(contents, equalTo("3, 5"))
     }
+
+    @Test
+    fun edevvbvfsdbfdbfdQuestion() {
+        val contents = Answerer().answerFor("Which of the following numbers is both a square and a cube: 1, 35, 64, 345, 729?")
+        assertThat(contents, equalTo("1, 64, 729"))
+    }
 }
