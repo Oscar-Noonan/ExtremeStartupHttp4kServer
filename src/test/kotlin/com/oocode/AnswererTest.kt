@@ -34,4 +34,10 @@ class AnswererTest {
         val contents = Answerer().answerFor("Which of the following numbers is the largest: 15, 57, 36?")
         assertThat(contents, equalTo("57"))
     }
+
+    @Test
+    fun edevvfdQuestion() {
+        val contents = Answerer().answerFor("Which of the following numbers are primes: 3, 4, 5?")
+        assertThat(contents, equalTo("3, 5"))
+    }
 }
