@@ -12,7 +12,10 @@ class Answerer {
             return numbers.max().toString()
             //What is 82 plus 87?
             //What is 51 multiplied by 98?
-        } else if (question.startsWith("What is")) {
+        } else if (question.startsWith("What is your name?")) {
+            return "oscar"
+        }
+        else if (question.startsWith("What is")) {
             var expressionStrings = question.substringAfter("What is ").dropLast(1).trim().split(" ")
             var numbers = mutableListOf<Int>()
             numbers.add(expressionStrings.first().toInt())

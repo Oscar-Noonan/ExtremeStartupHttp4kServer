@@ -10,4 +10,10 @@ class AnswererTest {
         val contents = Answerer().answerFor("What is your name?")
         assertThat(contents, equalTo("oscar"))
     }
+
+    @Test
+    fun plusQuestion() {
+        val contents = Answerer().answerFor("What is 82 plus 87?")
+        assertThat(contents, equalTo("169"))
+    }
 }
